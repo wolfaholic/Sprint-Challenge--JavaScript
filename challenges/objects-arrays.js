@@ -15,20 +15,42 @@
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log();
+const dinoStats = {
+  dinoname: 'tyrannosaurus',
+  diet: 'carnivorous',
+  weight: 7000,
+  length: 12,
+  period: 'Late Cretaceious'
+}
+console.log(dinoStats.weight);
 
 // What was the diet of a velociraptor?
-console.log();
+const dinoStatsOne = {
+  dinoname: 'velociraptor',
+  diet: 'carnivorous',
+  weight: 15,
+  length: 1.8,
+  period: 'Late Cretaceious'
+}
+console.log(dinoStatsOne.diet);
 
 // How long was a stegosaurus?
-console.log();
+const dinoStatsTwo = {
+  dinoname: 'stegosaurus',
+  diet: 'hervivourous',
+  weight: 2000,
+  length: 9,
+  period: 'Late Jurassic'
+}
+console.log(dinoStatsTwo.length);
 
 // What time period did tyrannosaurus live in?
-console.log();
+console.log(dinoStats.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log();
+dinoStats.sound = 'RAWERSRARARWERSARARARRRR!'
+console.log(dinoStats.sound);
 
 
 // ==== Arrays ====
@@ -49,9 +71,13 @@ const graduates = [
 ];
 
 /* Request 1: Create a new array called universities that contains all the universities in the graduates array. This will be an array of strings.
-
 Once you have the new array created, sort the universities alphabetically and log the result. */
+
 const universities = [];
+graduates.forEach(
+  graduate => {universities.push(graduate.university)
+  })
+  universities.sort();
 console.log(universities);
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. This will be an array of strings.
@@ -61,10 +87,25 @@ The resulting contact information strings should have a space between the first 
 
 Log the result of your new array. */
 const contactInfo = [];
+  graduates.forEach(
+  graduate => {contactInfo.push(graduate.first_name, graduate.email)
+  })
 console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
 const unisWithUni = [];
+unisWithUni.filter(function (item) {
+  return !Object.values(item).map(function (value) {
+    return String(value);
+  }).find(function (value) {
+  	return value.includes("Uni");
+  });
+});
+
+  
+ 
+
+
 console.log(unisWithUni);
 
 
