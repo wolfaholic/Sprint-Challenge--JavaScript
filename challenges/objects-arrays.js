@@ -93,20 +93,10 @@ const contactInfo = [];
 console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
-const unisWithUni = [];
-unisWithUni.filter(function (item) {
-  return !Object.values(item).map(function (value) {
-    return String(value);
-  }).find(function (value) {
-  	return value.includes("Uni");
-  });
-});
-
-  
  
-
-
+const unisWithUni = universities.filter(graduates => graduates.includes('Uni'));
 console.log(unisWithUni);
+
 
 
 // ==== ADVANCED Array Methods ====
@@ -141,6 +131,7 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 */
 
 const lowCaseAnimalNames = [];
+ 
 console.log(lowCaseAnimalNames);
 
 /* Request 3: .filter() 
@@ -157,6 +148,7 @@ The zoos need to know their total animal population across the United States. Fi
 
 */
 const populationTotal = 0;
+
 console.log(populationTotal);
 
 

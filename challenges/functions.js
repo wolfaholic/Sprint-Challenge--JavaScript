@@ -25,6 +25,7 @@
 
 // Explain in your own words why nestedfunction can access the variable internal.
 
+
 // Explanation: 
 
 
