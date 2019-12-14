@@ -29,20 +29,28 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your team lead
 
 1. Describe the biggest difference between `.forEach` & `.map`.
+    The biggest differences between .forEach and .map is that .forEach allows the change of the orgional array and .map returns a new array of the same size. .map is faster. 
 
 2. What is the difference between a function and a method?
+    A function is an object. A method is a fuction that belongs to an object.
 
 3. What is closure?
+    A closure gives you access to an outer fucntions scope from an inner function. 
 
 4. Describe the four rules of the 'this' keyword.
+    1. Windo/Global Object Binding - When in the global scope, the value of THIS will be the window/console object - Dont do that.
+    2. Implicit Binding - Whenever a preceeding dot calls a function. The object before the dot is THIS.
+    3. New Binding - Whenever we use a consturctor function THIS refers to the specific instance of the object that is created and returned. 
+    4. Explicity Binding - Whenever we use JS call or apply method, THIS is explicitly defined.
 
 5. Why do we need super() in an extended class?
+The super keyword is used to access and call functions on an object's parent.
 
 ## Project Set up
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
+- [x] Create a forked copy of this project.
 - [ ] Add TL as collaborator on Github.
 - [ ] Clone your OWN version of Repo (Not Lambda's by mistake!).
 - [ ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
